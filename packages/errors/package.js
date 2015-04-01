@@ -19,7 +19,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('deone:errors');
-  api.addFiles('errors-tests.js');
+  api.use('deone:errors', 'client');
+  api.use(['tinytest', 'test-helpers'], 'client');
+  api.addFiles('errors-tests.js', 'client');
 });
